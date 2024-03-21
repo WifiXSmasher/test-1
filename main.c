@@ -14,5 +14,27 @@ int binary_search(int arr[], int left, int right, int key) {
 }
 
 int main() {
+    int n;
+  
+    scanf("%d", &n);
 
+    int *arr = malloc(n * sizeof(int));
+   
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    int key = n / 2;
+    int result = binary_search(arr, 0, n - 1, key);
+    if (result != -1)
+    {
+        printf("Element %d  at index %d\n", key, result);
+    }
+    else
+    {
+        printf("Element %d not found\n", key);
+    }
+
+   
 }
